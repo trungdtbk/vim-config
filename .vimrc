@@ -62,6 +62,7 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
 " plugin for autocomplete
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'Townk/vim-autoclose'
 " plugin from http://vim-scripts.org/vim/scripts.html
 Plugin 'L9'
 " Git plugin not hosted on GitHub
