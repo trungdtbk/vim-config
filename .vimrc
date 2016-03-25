@@ -43,7 +43,7 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
+set pastetoggle=<F2>
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
