@@ -43,10 +43,14 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set clipboard=unnamedplus
 set pastetoggle=<F2>
 set nocompatible              " be iMproved, required
 filetype off                  " required
 set list
+
+"fix ycm loading issue on ubuntu 16.04
+let g:ycm_server_python_interpreter = '/usr/bin/python'
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -61,20 +65,26 @@ Plugin 'VundleVim/Vundle.vim'
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
 Plugin 'tpope/vim-fugitive'
-" plugin for autocomplete
+" nerd tree - directory explorer
+Plugin 'scrooloose/nerdtree'
+" vim for html/css
+Plugin 'mattn/emmet-vim'
+"" plugin for autocomplete
 Plugin 'Valloric/YouCompleteMe'
 "Plugin 'Townk/vim-autoclose'
 " plugin from http://vim-scripts.org/vim/scripts.html
 Plugin 'L9'
+Plugin 'nvie/vim-flake8'
+Plugin 'lervag/vimtex'
 " Git plugin not hosted on GitHub
-Plugin 'git://git.wincent.com/command-t.git'
+"Plugin 'git://git.wincent.com/command-t.git'
 " git repos on your local machine (i.e. when working on your own plugin)
 " Plugin 'file:///home/gmarik/path/to/plugin'
 " The sparkup vim script is in a subdirectory of this repo called vim.
 " Pass the path to set the runtimepath properly.
 " Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 " Avoid a name conflict with L9
-Plugin 'user/L9', {'name': 'newL9'}
+"Plugin 'user/L9', {'name': 'newL9'}
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -92,7 +102,7 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 
 " Sets how many lines of history VIM has to remember
-set history=700
+set history=10000
 
 " Enable filetype plugins
 filetype plugin on
